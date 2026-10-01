@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Diri</title>
+</head>
+<body>
+    <header> 
+        <h1> Sistem Informasi Mahasiswa</h1>
+        <p> Halaman ini berisi informasi Data Mahasiswa </p>
+        <img src= "FORMAL.jpg" alt="Foto Diri" width= "100">
+    </header>
+
+    <hr>
+    <nav>
+        <ul>
+            <li><a href=#informasi> Informasi Biodata</a></li>
+            <li><a href=#daftarmahasiswa> Data Diri</a></li>
+            <li><a href=#form-tambah> Form Biodata</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+<section id="daftarmahasiswa">
+
+    <h2>Daftar Mahasiswa Aktif</h2>
+
+    <p>
+        Berikut merupakan data mahasiswa yang berisi informasi
+        biodata secara terstruktur.
+    </p>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NPM</th>
+                <th>Program Studi</th>
+                <th>Nomor Telepon</th>
+                <th>Hobi</th>
+                <th>Foto</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>Fany Nuurviana</td>
+                <td>2415061037</td>
+                <td>Teknik Informatika</td>
+                <td>088287232181</td>
+                <td>Mendengarkan musik</td>
+                <td>
+                    <img src="FORMAL.jpg" alt="Foto Fany" width="70">
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>A </td>
+                <td>0987654</td>
+                <td>Teknik Informatika</td>
+                <td>098765432</td>
+                <td>Membaca</td>
+                <td>
+                     <img src="FORMAL.jpg" alt="Foto A" width="70">
+                </td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>B</td>
+                <td>123456</td>
+                <td>Teknik Informatika</td>
+                <td>091234567</td>
+                <td>Menonton film</td>
+                <td>
+                     <img src="FORMAL.jpg" alt="Foto B" width="70">
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+<hr>
+
+<section id="form-tambah">
+
+    <h2>Tambah Mahasiswa Baru</h2>
+
+    <p>
+        Silakan masukkan data mahasiswa melalui formulir berikut.
+    </p>
+
+    <form action="#" method="POST">
+
+        <fieldset>
+
+            <legend>Form Data Mahasiswa</legend>
+
+            <p>
+                <label for="npm">Nomor Pokok Mahasiswa (NPM):</label>
+                <br>
+
+                <input
+                    type="text"
+                    id="npm"
+                    name="npm"
+                    placeholder="Contoh : 2315061118"
+                    required
+                    pattern="[0-9]{8,12}"
+                    title="NPM harus berupa angka 8-12 digit"
+                >
+
+                <br>
+
+                <small>
+                    NPM harus berupa angka 8-12 digit.
+                </small>
+            </p>
+
+            <p>
+                <label for="nama">Nama Lengkap:</label>
+                <br>
+
+                <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    placeholder="Contoh : M. Sidiq Firdaus"
+                    required
+                    minlength="3"
+                    maxlength="100"
+                >
+
+                <br>
+
+                <small>
+                    Nama lengkap minimal 3 karakter dan maksimal 100 karakter.
+                </small>
+            </p>
+
+            <p>
+                <label for="program_studi">Program Studi:</label>
+                <br>
+
+                <select
+                    id="program_studi"
+                    name="program_studi"
+                    required
+                >
+                    <option value="">Pilih Program Studi</option>
+                    <option value="Teknik Informatika">
+                        Teknik Informatika
+                    </option>
+                </select>
+
+                <br>
+
+                <small>
+                    Silakan pilih program studi.
+                </small>
+            </p>
+
+            <p>
+                <label for="angkatan">Tahun Angkatan:</label>
+                <br>
+
+                <input
+                    type="number"
+                    id="angkatan"
+                    name="angkatan"
+                    placeholder="Contoh : 2024"
+                    required
+                    min="2018"
+                    max="2026"
+                >
+
+                <br>
+
+                <small>
+                    Tahun angkatan antara 2018 sampai 2026.
+                </small>
+            </p>
+
+            <p>
+                <label for="email">Alamat Email:</label>
+                <br>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Contoh : email@example.com"
+                    required
+                >
+
+                <br>
+
+                <small>
+                    Masukkan alamat email yang valid.
+                </small>
+            </p>
+
+            <p>
+                <button type="submit">
+                    Simpan Data Mahasiswa
+                </button>
+
+                <button type="reset">
+                    Reset Formulir
+                </button>
+            </p>
+
+        </fieldset>
+
+    </form>
+
+</section>
+</body>
+</html>
